@@ -1,0 +1,140 @@
+.footer__container {
+    background-color: #1A1A1A;
+    color: #97A1B0;
+    padding-top: 58px;
+    padding-bottom: 58px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.footer__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+.footer__calling {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(227, 232, 237, 0.12);
+}
+
+.footer__number {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all .2s ease-in;
+
+    &:hover {
+        color: #29ABE2;
+    }
+}
+
+.footer__btn {
+    padding: 20px 28px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid rgba(227, 232, 237, 0.24);
+    transition: all .2s ease-in;
+
+    &:hover {
+        background-color: #FFFFFF;
+        border-color: #FFFFFF;
+        color: #1A1A1A;
+    }
+}
+
+.footer__box {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__email {
+    color: #29ABE2;
+    text-decoration: none;
+    transition: all .2s ease;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.footer__address {
+    font-weight: 500;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-top: 26px;
+    margin-bottom: 40px;
+}
+
+.footer__support {
+    font-weight: 500;
+    line-height: 17px;
+    margin-top: auto;
+
+    & span {
+        border-bottom: 1px solid rgba(151, 161, 176, 0.24);
+    }
+}
+
+.footer__column ul {
+    padding-left: 0;
+    margin: 0;
+
+    & li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: all .1s ease-in;
+
+
+        &:hover {
+            color: #97A1B0;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer__container {
+        padding-top: 56px;
+        padding-bottom: 100px;
+        color: #FFFFFF;
+    }
+    .footer__title{
+        margin-bottom: 0;
+    }
+    .footer__calling{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 32px;
+    }
+
+    .footer__number {
+        font-size: 28px;
+        line-height: 58px;
+        margin-bottom: 16px;
+    }
+    .footer__box{
+        flex-direction: column;
+        position: relative;
+        padding-top: 16px;
+    }
+    .footer__address{
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+    .footer__support{
+position: absolute;
+bottom: -42px;
+    }
+}

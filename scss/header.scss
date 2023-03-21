@@ -1,0 +1,238 @@
+.header__container {
+    &::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        border-bottom: 1px solid #E3E8ED;
+    }
+}
+
+.header__title {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+
+    & .active {
+        color: #1A1A1A;
+        padding-bottom: 10px;
+        border-bottom: 5px solid #1A1A1A;
+    }
+}
+
+.title__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    color: #97A1B0;
+    margin-right: 32px;
+
+    &.mobile {
+        color: #1A1A1A;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: rgb(26, 26, 26, .7);
+    }
+}
+
+.header__navigation {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__nav__link {
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1A1A1A;
+
+    &:last-child {
+        color: #FFFFFF;
+        margin-right: 0;
+        padding: 14px 18px;
+        background-color: #1A1A1A;
+    }
+}
+
+.header__call {
+    display: none;
+    width: 24px;
+    margin-left: auto;
+    margin-right: 24px;
+}
+
+.header__burger {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+@media (max-width: 1199.98px) {
+    .title__link {
+        margin-right: 20px;
+    }
+
+    .header__nav__link {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .title__link {
+        font-size: 11px;
+        margin-right: 10px;
+    }
+
+    .header__nav__link {
+        font-size: 8px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header__logo svg {
+        width: 180px;
+    }
+
+    .header__call {
+        display: block;
+    }
+
+    .header__nav,
+    .header__title {
+        display: none;
+    }
+
+    header {
+        z-index: 4;
+    }
+
+    .header__container {
+        &::before {
+            display: none;
+        }
+    }
+
+    .header__nav {
+        display: flex;
+        z-index: 2;
+        top: 76px;
+        right: -382px;
+        position: absolute;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        padding: 20px 15px;
+        border: 2px solid black;
+        transition: all .2s linear;
+    }
+
+    .header__nav__link {
+        font-size: 16px;
+        line-height: 48px;
+
+        &:last-child {
+            padding: 8px 10px;
+            background-color: #1A1A1A;
+        }
+    }
+
+    .header__menu {
+        order: 2;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: -150px;
+        flex-grow: 0;
+        flex-direction: column;
+        border: 1px solid #000;
+        background-color: #ffffff;
+        padding: 20px;
+        transition: all .2s linear;
+    }
+
+    .menu-open {
+        & .header__nav {
+            right: -15px;
+        }
+
+        & .header__burger {
+            & span {
+                background-color: transparent;
+            }
+
+            &::before {
+                transform: rotate(45grad);
+                margin-top: 9px;
+            }
+
+            &::after {
+                margin-bottom: 9px;
+                transform: rotate(-45grad);
+            }
+        }
+
+        & .header__menu {
+            top: 104px;
+            margin-top: 0;
+        }
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        transition: all 1s linear;
+
+        & span {
+            position: absolute;
+            background-color: #1A1A1A;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all .2s linear;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background-color: #1A1A1A;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all .2s linear;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+}
