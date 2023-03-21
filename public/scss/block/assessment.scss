@@ -1,0 +1,27 @@
+.assessment__title {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.01em;
+    color: #1A1A1A;
+    transition: all .2s linear;
+    text-decoration: underline;
+    text-decoration-color: #E3E8ED;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 1px;
+
+    & svg{
+        margin-left: 31px;
+    }
+    &:hover {
+        color: #29ABE2;
+        text-decoration-color: rgba(41, 171, 226, 0.24);
+    }
+}
+
+.assessment__text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 24px;
+    margin-bottom: 112px;
+}
