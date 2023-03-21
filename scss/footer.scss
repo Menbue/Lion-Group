@@ -82,6 +82,7 @@
     font-weight: 500;
     line-height: 17px;
     margin-top: auto;
+    color: #97A1B0;
 
     & span {
         border-bottom: 1px solid rgba(151, 161, 176, 0.24);
@@ -110,10 +111,12 @@
         padding-bottom: 100px;
         color: #FFFFFF;
     }
-    .footer__title{
+
+    .footer__title {
         margin-bottom: 0;
     }
-    .footer__calling{
+
+    .footer__calling {
         flex-direction: column;
         align-items: flex-start;
         padding-bottom: 32px;
@@ -124,17 +127,20 @@
         line-height: 58px;
         margin-bottom: 16px;
     }
-    .footer__box{
+
+    .footer__box {
         flex-direction: column;
         position: relative;
         padding-top: 16px;
     }
-    .footer__address{
+
+    .footer__address {
         margin-top: 16px;
         margin-bottom: 32px;
     }
-    .footer__support{
-position: absolute;
-bottom: -42px;
+
+    .footer__support {
+        position: absolute;
+        bottom: -42px;
     }
 }
