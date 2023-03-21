@@ -14,7 +14,7 @@
   <div class="wrapper">
 
     <div class="header__container">
-      <header class="header">
+      <header class="header" id="header">
         <div class="header__title">
           <div class="header__title__first">
             <a class="title__link active" href="#">Ремонт и отделка</a>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="header__navigation">
-          <a class="header__logo" href="">
+          <a class="header__logo" href="#">
             <svg width="248" height="48" viewBox="0 0 248 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M60.001 16.5003H63.001V28.5003H72.001V31.5003H60.001V16.5003Z" fill="#1A1A1A" />
               <path d="M87.502 18.0004V30.0004H84.502V18.0004H87.502Z" fill="#1A1A1A" />
@@ -69,6 +69,7 @@
             <a href="#" class="header__nav__link">Коммерческий ремонт</a>
             <a href="#" class="header__nav__link">Калькулятор ремонта</a>
           </div>
+          <a class="header__call" href="tel:74951502493"><img src="public/img/header/call.svg" alt=""></a>
           <button class="header__burger" id="burger">
             <span></span>
           </button>
@@ -121,7 +122,7 @@
       <div class="directions">
         <h2 class="directions__title">Ключевые направления</h2>
 
-        <ul class="directions__tabs" type="none">
+        <ul class="directions__tabs" type="none" id="tabs">
           <li class="card__list active" data-card="card-1">Ремонт квартир</li>
           <li class="card__list" data-card="card-2">Коммерческая недвижимость</li>
           <li class="card__list" data-card="card-3">Ремонт домов</li>
@@ -487,13 +488,7 @@
     </section>
 
     <section class="assessment">
-      <a class="assessment__title" href="#">У вас уже есть смета от подрядчиков?
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M24.344 13.9998L13.616 3.27185L16.444 0.443848L32 15.9998L16.444 31.5558L13.616 28.7278L24.344 17.9998H0V13.9998H24.344Z"
-            fill="#29ABE2" />
-        </svg>
-      </a>
+      <a class="assessment__title" href="#">У вас уже есть смета от подрядчиков?</a>
       <p class="assessment__text">Бесплатно сделаем аудит и проверим на «порядочность» будущих исполнителей.</p>
     </section>
 
@@ -504,24 +499,28 @@
       <div class="swiper reviews__swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image1.jpg">
+            <video class="reviews__column__video" preload="none" poster="public/img/reviews/reviews-image1.jpg">
               <source src="#" type="">
             </video>
             <p class="reviews__column__title">Видеоотзыв от Андрея Константинова</p>
             <p class="reviews__column__text">Ремонт коттеджа в Сколково</p>
           </div>
           <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image2.jpg">
+            <video class="reviews__column__video" preload="none" poster="public/img/reviews/reviews-image2.jpg">
               <source src="#" type="">
             </video>
             <p class="reviews__column__title">Видеоотзыв от Семьи Костенко</p>
             <p class="reviews__column__text">Ремонт квартиры в Медведково</p>
           </div>
           <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image2.jpg">
+            <video class="reviews__column__video" preload="none" poster="http://placehold.it/540x312">
+              <source src="#" type="">
+            </video>
+            <p class="reviews__column__title">Видеоотзыв от Семьи Костенко</p>
+            <p class="reviews__column__text">Ремонт квартиры в Медведково</p>
+          </div>
+          <div class="swiper-slide">
+            <video class="reviews__column__video" preload="none" poster="http://placehold.it/540x312">
               <source src="#" type="">
             </video>
             <p class="reviews__column__title">Видеоотзыв от Семьи Костенко</p>
@@ -532,69 +531,48 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-      <!-- 
-      <div class="swiper reviews__swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image1.jpg">
-              <source src="#" type="">
-            </video>
-            <p class="reviews__column__title">Видеоотзыв от Андрея Константинова</p>
-            <p class="reviews__column__text">Ремонт коттеджа в Сколково</p>
-          </div>
-          <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image2.jpg">
-              <source src="#" type="">
-            </video>
-            <p class="reviews__column__title">Видеоотзыв от Семьи Костенко</p>
-            <p class="reviews__column__text">Ремонт квартиры в Медведково</p>
-          </div>
-          <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image2.jpg">
-              <source src="#" type="">
-            </video>
-            <p class="reviews__column__title">Видеоотзыв от Семьи Костенко</p>
-            <p class="reviews__column__text">Ремонт квартиры в Медведково</p>
-          </div>
-          <div class="swiper-slide">
-            <video class="reviews__column__video" controls preload="none"
-              poster="public/img/reviews/reviews-image2.jpg">
-              <source src="#" type="">
-            </video>
-            <p class="reviews__column__title">Видеоотзыв от Семьи Костенко</p>
-            <p class="reviews__column__text">Ремонт квартиры в Медведково</p>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div> -->
     </section>
 
     <div class="instagram__container">
-      <section class="instagram">
-        <h6 class="instagram__title">Наш Instagram<a class="instagram__link"
-            href="https://www.instagram.com/">@remontlion</a></h6>
-        <div class="instagram__grid">
-          <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image1.jpg" alt=""></a>
-          <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image2.jpg" alt=""></a>
-          <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image3.jpg" alt=""></a>
-          <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image4.jpg" alt=""></a>
+      <div class="instagram">
+        <div class="instagram__info">
+          <h6 class="instagram__title">Наш Instagram</h6>
+          <a class="instagram__link" href="https://www.instagram.com/">@remontlion</a>
         </div>
-      </section>
+        <div class="swiper instagram__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image1.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image2.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image3.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image4.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="instagram__image" href="#"><img src="public/img/instagram/instagram-image4.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
 
     <section class="partners">
       <p class="partners__title">Проверенные партнёры</p>
       <div class="partners__box">
-        <img src="public/img/partners/rehau-logo.svg" alt="">
-        <img src="public/img/partners/rehau-logo.svg" alt="">
-        <img src="public/img/partners/rehau-logo.svg" alt="">
-        <img src="public/img/partners/rehau-logo.svg" alt="">
-        <img src="public/img/partners/rehau-logo.svg" alt="">
-        <img src="public/img/partners/rehau-logo.svg" alt="">
+        <img class="partners__image" src="public/img/partners/rehau-logo.svg" alt="">
+        <img class="partners__image" src="public/img/partners/rehau-logo.svg" alt="">
+        <img class="partners__image" src="public/img/partners/rehau-logo.svg" alt="">
+        <img class="partners__image" src="public/img/partners/rehau-logo.svg" alt="">
+        <img class="partners__image" src="public/img/partners/rehau-logo.svg" alt="">
+        <img class="partners__image" src="public/img/partners/rehau-logo.svg" alt="">
       </div>
     </section>
 
